@@ -1,5 +1,4 @@
 @echo off
-@echo off
 chcp 65001 >nul
 :: ==================================================
 :: NOME: Manutencao Segura do Windows
@@ -7,16 +6,6 @@ chcp 65001 >nul
 :: ==================================================
 title Manutencao Segura - Lucas Moreira
 color 0A
-
-:: VERIFICAR ADMIN
-net session >nul 2>&1
-if %errorlevel% neq 0 (
-    echo.
-    echo [!] ERRO: Execute este arquivo como administrador.
-    echo.
-    pause
-    exit
-)
 
 cls
 echo ==================================================
@@ -30,7 +19,7 @@ echo.
 net session >nul 2>&1
 if %errorlevel% neq 0 (
     echo.
-    echo Execute este arquivo como administrador.
+    echo [!] ERRO: Execute este arquivo como administrador.
     echo.
     pause
     exit
